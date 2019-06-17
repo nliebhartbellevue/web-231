@@ -1,5 +1,5 @@
 /**
- * Title: Assignment 3.2
+ * Title: Exercise 3.2
  * Author: Nathaniel Liebhart
  * Date: June 16th, 2019
  * Description: Patten matching functions
@@ -11,7 +11,7 @@
  * Description: Return a formatted string
  */
 const header = require('../liebhart-header');
-console.log(header.display('Nathaniel', 'Liebhart', 'Assignment 3.2') + '\n');
+console.log(header.display('Nathaniel', 'Liebhart', 'Exercise 3.2') + '\n');
 
 // Local test variables with default values
 const truck = 'Truck',
