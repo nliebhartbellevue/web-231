@@ -26,7 +26,7 @@
  * Description: Returns formatted header string
  */
 const header = require('../liebhart-header');
-console.log(header.display('Nathaniel', 'Liebhart', 'Exercise 5.2') + '\n');
+console.log(header.display('Nathaniel', 'Liebhart', 'Exercise 5.3') + '\n');
 
 const composers = [
   {
