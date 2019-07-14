@@ -1,0 +1,28 @@
+/*
+=================================
+Title: site.css
+Author: Nathaniel Liebhart
+Date: July 14th, 2019
+Description: This is the root CSS file
+=================================
+*/
+
+table {
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 5px;
+}
+
+th {
+  background-color: steelblue;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: lightsteelblue;
+}
