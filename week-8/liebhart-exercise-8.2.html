@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+      rel="stylesheet"
+    />
+    <title>Exercise 8.2</title>
+
+    <style type="text/css">
+      body {
+        margin: 0;
+        font-family: 'Roboto';
+      }
+
+      ul {
+        list-style: none;
+        margin: 0 auto;
+        width: 25%;
+      }
+
+      #fruits {
+        align-content: center;
+        margin-top: 20px;
+      }
+
+      h3 {
+        margin: 0 42% 0 39%;
+      }
+
+      .top-bar {
+        width: 100%;
+        height: 2rem;
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-bar"></div>
+    <div id="fruits"></div>
+
+    <script>
+      const Orange = new Fruit(1, 'Orange'),
+        Banana = new Fruit(2, 'Banana'),
+        Apple = new Fruit(3, 'Apple'),
+        Pear = new Fruit(4, 'Pear'),
+        Mango = new Fruit(5, 'Mango');
+
+      let fruits = [Orange, Banana, Apple, Pear, Mango];
+      const list = document.getElementById('fruits');
+
+      let uList = "<h3 class='title'>Fruit List:</h3><ul>";
+      fruits.forEach(function(x) {
+        uList += `<li>${x.id} is the ID of ${x.type}.</li>`;
+      });
+      uList += '</ul>';
+
+      list.innerHTML = uList;
+
+      function Fruit(id, type) {
+        this.id = id;
+        this.type = type;
+      }
+
+      cb = x => {
+        uList += '<li>' + x + '</li>';
+      };
+    </script>
+  </body>
+</html>
