@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Assignment 8.4</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- you will need to the href to point to your root directories css file -->
+    <link rel="stylesheet" href="../site.css" />
+
+    <style type="text/css">
+      #employee tbody tr:hover {
+        cursor: pointer;
+        background-color: #ffff99;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="emps"></div>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        function Employee(id, firstName, lastName, title) {
+          this.id = id;
+          this.firstName = firstName;
+          this.lastName = lastName;
+          this.title = title;
+        }
+
+        const John = new Employee(1, 'John', 'Doe', 'CEO'),
+          Tom = new Employee(2, 'Tom', 'Jones', 'CFO'),
+          Jane = new Employee(3, 'Jane', 'Doe', 'CTO'),
+          Jan = new Employee(4, 'Jan', 'Smith', 'CSO'),
+          Rick = new Employee(5, 'Rick', 'Brown', 'VP of Sales');
+
+        let employees = [John, Tom, Jane, Jan, Rick];
+
+        getEmployee = x => {
+          employees.forEach(function(e) {
+            if (e.id === parseInt(x)) {
+              alert(`${e.id} ${e.firstName} ${e.lastName} ${e.title}`);
+            }
+          });
+        };
+
+        output = "<table id ='employee'>";
+        output += '<thead>';
+        output +=
+          '<th>ID</th><th>First Name</th><th>Last Name</th><th>Title</th>';
+        output += '</thead>';
+        output += '<tbody>';
+        employees.forEach(function(x) {
+          output += `<tr><td>${x.id}</td><td>${x.firstName}</td><td>${
+            x.lastName
+          }</td><td>${x.title}</td></tr>`;
+        });
+        output += '</tbody></table>';
+
+        $('#emps').html(output);
+
+        // jQuery onClick event
+        // Don't remove this, just add your code to the body of the event (curly braces)
+        $(function() {
+          $('table tr').click(function() {
+            let emp = $(this)
+              .find('td:first')
+              .html();
+            getEmployee(emp);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
