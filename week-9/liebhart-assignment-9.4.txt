@@ -1,0 +1,31 @@
+1. Step-by-step instructions on how one might set break points and "walk-through" a JavaScript application (include screen captures)
+a. Open Chrome developer tools by pressing F12
+b. Click the event listener breakpoints
+c. Next to the mouse breakpoint click expand and check the mousedown breakpoint
+d. Now the application is set to have a breakpoint whenever a click event occurs
+e. Now that the application has paused on our breakpoint we can step through it
+f. By pressing the step button the application will go through the source code step-by-step
+
+2. Step-by-step instructions on how one might log and read messages from the JavaScript console window (include screen captures)
+a. Logging a message is done by inserting a console.log into the code
+b. First we insert a console.log
+c. Then we run the application with the console open
+d. Once this line of code runs we get our message in the console
+
+
+3. Step-by-step instructions on how one might select HTML elements in the JavaScript console window (include screen captures)
+a. Open Chrome developer tools
+b. Click on the elements tab
+c. Hover over the h1 tag
+d. Now in the console use the document.querySelector(“h1”) method
+e. The console will now output the h1 tag
+
+4. Step-by-step instructions on how one might simulate CSS states (hover, focus) on live HTML elements (include screen captures)
+a. First off we open the developer console elements tab
+b. Expand until we have expanded the ul to see all of the li’s
+c. Click the first li
+d. In the style tab to the right click the :hov
+e. Check the check box for :hover
+
+
+
